@@ -1,6 +1,4 @@
-# Header 1
-
-Stuff
+# Twitter Stuff
 
 ```postgresql
 CREATE TABLE location (
@@ -12,7 +10,8 @@ CREATE TABLE location (
 );
 ```
 
-# Composite
+## Composite key
+
 In the table "location", the PRIMARY KEY is a composite of latitude and longitude and is then used as a foreign key in the tweets table
 
 ```postgresql
