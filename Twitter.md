@@ -1,0 +1,37 @@
+
+CREATE TABLE location (
+    latitude double precision,
+    longitude double precision,
+    country text,
+    place text,    
+    PRIMARY KEY(latitude, longitude)
+);
+
+# Composite
+In the table "location", the PRIMARY KEY is a composite of latitude and longitude and is then used as a foreign key in the tweets table
+
+
+CREATE TABLE tweets (
+    id bigint,
+    date date,
+    hour time,
+    uname text,
+    message text,
+    favs bigint,
+    rts bigint,
+    latitude double precision,
+    longitude double precision,
+    FOREIGN KEY (latitude, longitude) REFERENCES location (latitude, longitude),
+    picture text,
+    listed bigint,
+    PRIMARY KEY(id)
+);
+
+CREATE TABLE users (
+    uname text,
+    nickname text,
+    bio text,
+    followers bigint,
+    following bigint,
+    PRIMARY KEY(uname)
+);
