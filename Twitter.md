@@ -1,16 +1,21 @@
+# Header 1
 
+Stuff
+
+```postgresql
 CREATE TABLE location (
     latitude double precision,
     longitude double precision,
     country text,
-    place text,    
+    place text,
     PRIMARY KEY(latitude, longitude)
 );
+```
 
 # Composite
 In the table "location", the PRIMARY KEY is a composite of latitude and longitude and is then used as a foreign key in the tweets table
 
-
+```postgresql
 CREATE TABLE tweets (
     id bigint,
     date date,
@@ -26,7 +31,9 @@ CREATE TABLE tweets (
     listed bigint,
     PRIMARY KEY(id)
 );
+```
 
+```postgresql
 CREATE TABLE users (
     uname text,
     nickname text,
@@ -35,3 +42,4 @@ CREATE TABLE users (
     following bigint,
     PRIMARY KEY(uname)
 );
+```
