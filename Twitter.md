@@ -28,6 +28,8 @@ CREATE TABLE tweets (
     FOREIGN KEY (latitude, longitude) REFERENCES location (latitude, longitude),
     picture text,
     listed bigint,
+    lang text,
+    url text,
     PRIMARY KEY(id)
 );
 ```
