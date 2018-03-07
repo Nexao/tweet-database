@@ -20,6 +20,7 @@ CREATE TABLE tweets (
     date date,
     hour time,
     uname text,
+    FOREIGN KEY (uname) REFERENCES users (uname),
     message text,
     favs bigint,
     rts bigint,
